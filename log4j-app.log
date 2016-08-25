@@ -1,0 +1,100 @@
+2016-08-25 15:39:13 DEBUG StandardEnvironment:109 - Adding [systemProperties] PropertySource with lowest search precedence
+2016-08-25 15:39:13 DEBUG StandardEnvironment:109 - Adding [systemEnvironment] PropertySource with lowest search precedence
+2016-08-25 15:39:13 DEBUG StandardEnvironment:127 - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+2016-08-25 15:39:13 INFO  AnnotationConfigApplicationContext:581 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@c6b058a: startup date [Thu Aug 25 15:39:13 WIB 2016]; root of context hierarchy
+2016-08-25 15:39:13 DEBUG AnnotationConfigApplicationContext:615 - Bean factory for org.springframework.context.annotation.AnnotationConfigApplicationContext@c6b058a: org.springframework.beans.factory.support.DefaultListableBeanFactory@18aab2a1: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.event.internalEventListenerProcessor,org.springframework.context.event.internalEventListenerFactory,appConfig]; root of factory hierarchy
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor' to allow for resolving potential circular references
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2016-08-25 15:39:13 DEBUG ConfigurationClassBeanDefinitionReader:256 - Registering bean definition for @Bean method lab.aikibo.config.AppConfig.client()
+2016-08-25 15:39:13 DEBUG ConfigurationClassEnhancer:109 - Successfully enhanced lab.aikibo.config.AppConfig; enhanced class name is: lab.aikibo.config.AppConfig$$EnhancerBySpringCGLIB$$bc25fd9c
+2016-08-25 15:39:13 DEBUG ConfigurationClassPostProcessor:409 - Replacing bean definition 'appConfig' existing class 'lab.aikibo.config.AppConfig' with enhanced class 'lab.aikibo.config.AppConfig$$EnhancerBySpringCGLIB$$bc25fd9c'
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor' to allow for resolving potential circular references
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor' to allow for resolving potential circular references
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor' to allow for resolving potential circular references
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor' to allow for resolving potential circular references
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor'
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor'
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor' to allow for resolving potential circular references
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor'
+2016-08-25 15:39:13 DEBUG AnnotationConfigApplicationContext:728 - Unable to locate MessageSource with name 'messageSource': using default [org.springframework.context.support.DelegatingMessageSource@6c1317ae]
+2016-08-25 15:39:13 DEBUG AnnotationConfigApplicationContext:752 - Unable to locate ApplicationEventMulticaster with name 'applicationEventMulticaster': using default [org.springframework.context.event.SimpleApplicationEventMulticaster@7dcc14a]
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:745 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@18aab2a1: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.event.internalEventListenerProcessor,org.springframework.context.event.internalEventListenerFactory,appConfig,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor,client]; root of factory hierarchy
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'org.springframework.context.event.internalEventListenerProcessor'
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'org.springframework.context.event.internalEventListenerProcessor' to allow for resolving potential circular references
+2016-08-25 15:39:13 DEBUG SpringFactoriesLoader:89 - Loaded [org.springframework.beans.BeanInfoFactory] names: [org.springframework.beans.ExtendedBeanInfoFactory]
+2016-08-25 15:39:13 DEBUG CachedIntrospectionResults:265 - Getting BeanInfo for class [org.springframework.context.event.EventListenerMethodProcessor]
+2016-08-25 15:39:13 DEBUG CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [org.springframework.context.event.EventListenerMethodProcessor]
+2016-08-25 15:39:13 DEBUG CachedIntrospectionResults:297 - Found bean property 'applicationContext' of type [org.springframework.context.ApplicationContext]
+2016-08-25 15:39:13 DEBUG CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'org.springframework.context.event.internalEventListenerProcessor'
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'org.springframework.context.event.internalEventListenerFactory'
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'org.springframework.context.event.internalEventListenerFactory' to allow for resolving potential circular references
+2016-08-25 15:39:13 DEBUG CachedIntrospectionResults:265 - Getting BeanInfo for class [org.springframework.context.event.DefaultEventListenerFactory]
+2016-08-25 15:39:13 DEBUG CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [org.springframework.context.event.DefaultEventListenerFactory]
+2016-08-25 15:39:13 DEBUG CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
+2016-08-25 15:39:13 DEBUG CachedIntrospectionResults:297 - Found bean property 'order' of type [int]
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'org.springframework.context.event.internalEventListenerFactory'
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'appConfig'
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'appConfig'
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'appConfig' to allow for resolving potential circular references
+2016-08-25 15:39:13 DEBUG CachedIntrospectionResults:265 - Getting BeanInfo for class [lab.aikibo.config.AppConfig$$EnhancerBySpringCGLIB$$bc25fd9c]
+2016-08-25 15:39:13 DEBUG CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [lab.aikibo.config.AppConfig$$EnhancerBySpringCGLIB$$bc25fd9c]
+2016-08-25 15:39:13 DEBUG CachedIntrospectionResults:297 - Found bean property 'beanFactory' of type [org.springframework.beans.factory.BeanFactory]
+2016-08-25 15:39:13 DEBUG CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'appConfig'
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor'
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'client'
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'client'
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'appConfig'
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'client' to allow for resolving potential circular references
+2016-08-25 15:39:13 DEBUG CachedIntrospectionResults:265 - Getting BeanInfo for class [lab.aikibo.services.ClientImpl]
+2016-08-25 15:39:13 DEBUG CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [lab.aikibo.services.ClientImpl]
+2016-08-25 15:39:13 DEBUG CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'client'
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
+2016-08-25 15:39:13 DEBUG EventListenerMethodProcessor:148 - No @EventListener annotations found on bean class: class org.springframework.context.annotation.ConfigurationClassPostProcessor
+2016-08-25 15:39:13 DEBUG EventListenerMethodProcessor:148 - No @EventListener annotations found on bean class: class org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor
+2016-08-25 15:39:13 DEBUG EventListenerMethodProcessor:148 - No @EventListener annotations found on bean class: class org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor
+2016-08-25 15:39:13 DEBUG EventListenerMethodProcessor:148 - No @EventListener annotations found on bean class: class org.springframework.context.annotation.CommonAnnotationBeanPostProcessor
+2016-08-25 15:39:13 DEBUG EventListenerMethodProcessor:148 - No @EventListener annotations found on bean class: class org.springframework.context.event.EventListenerMethodProcessor
+2016-08-25 15:39:13 DEBUG EventListenerMethodProcessor:148 - No @EventListener annotations found on bean class: class org.springframework.context.event.DefaultEventListenerFactory
+2016-08-25 15:39:13 DEBUG EventListenerMethodProcessor:148 - No @EventListener annotations found on bean class: class lab.aikibo.config.AppConfig$$EnhancerBySpringCGLIB$$bc25fd9c
+2016-08-25 15:39:13 DEBUG EventListenerMethodProcessor:148 - No @EventListener annotations found on bean class: class org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor
+2016-08-25 15:39:13 DEBUG EventListenerMethodProcessor:148 - No @EventListener annotations found on bean class: class org.springframework.context.annotation.ConfigurationClassPostProcessor$EnhancedConfigurationBeanPostProcessor
+2016-08-25 15:39:13 DEBUG EventListenerMethodProcessor:148 - No @EventListener annotations found on bean class: class lab.aikibo.services.ClientImpl
+2016-08-25 15:39:13 DEBUG EventListenerMethodProcessor:148 - No @EventListener annotations found on bean class: class org.springframework.core.env.StandardEnvironment
+2016-08-25 15:39:13 DEBUG EventListenerMethodProcessor:148 - No @EventListener annotations found on bean class: class java.util.Properties
+2016-08-25 15:39:13 DEBUG EventListenerMethodProcessor:148 - No @EventListener annotations found on bean class: class java.util.Collections$UnmodifiableMap
+2016-08-25 15:39:13 DEBUG EventListenerMethodProcessor:148 - No @EventListener annotations found on bean class: class org.springframework.context.annotation.ConfigurationClassParser$ImportStack
+2016-08-25 15:39:13 DEBUG EventListenerMethodProcessor:148 - No @EventListener annotations found on bean class: class org.springframework.context.support.DelegatingMessageSource
+2016-08-25 15:39:13 DEBUG EventListenerMethodProcessor:148 - No @EventListener annotations found on bean class: class org.springframework.context.event.SimpleApplicationEventMulticaster
+2016-08-25 15:39:13 DEBUG AnnotationConfigApplicationContext:779 - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@5a301648]
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'lifecycleProcessor'
+2016-08-25 15:39:13 DEBUG AnnotationConfigApplicationContext:362 - Publishing event in org.springframework.context.annotation.AnnotationConfigApplicationContext@c6b058a: org.springframework.context.event.ContextRefreshedEvent[source=org.springframework.context.annotation.AnnotationConfigApplicationContext@c6b058a: startup date [Thu Aug 25 15:39:13 WIB 2016]; root of context hierarchy]
+2016-08-25 15:39:13 DEBUG PropertySourcesPropertyResolver:78 - Searching for key 'spring.liveBeansView.mbeanDomain' in [systemProperties]
+2016-08-25 15:39:13 DEBUG PropertySourcesPropertyResolver:78 - Searching for key 'spring.liveBeansView.mbeanDomain' in [systemEnvironment]
+2016-08-25 15:39:13 DEBUG PropertySourcesPropertyResolver:91 - Could not find key 'spring.liveBeansView.mbeanDomain' in any property source
+2016-08-25 15:39:13 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'client'
+2016-08-25 15:39:14 DEBUG App:50 - Req [1800A2380000000100000400000000000000123456201608250000011539140825029Tutorial ISO 8583 Dengan Java001]
+2016-08-25 15:39:14 DEBUG App:51 - Res [1810A2380000020100000400000000000000123456201608250000011539140825000029Tutorial ISO 8583 Dengan Java001]
