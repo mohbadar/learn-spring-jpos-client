@@ -14,11 +14,17 @@ import org.jpos.iso.packager.GenericPackager;
 import lab.aikibo.App;
 
 public class ClientImpl implements Client {
+  String hostname;
+  int portNumber;
+
+  private void init() {
+    hostname = "localhost";
+    portNumber = 15243;
+  }
+
   @Override
   public void connect() {
-    String hostname = "localhost";
-    int portNumber = 15243;
-
+    init();
     try {
       ISOPackager packager = new GenericPackager("packager/iso93ascii.xml");
       ASCIIChannel channel = new ASCIIChannel(hostname, portNumber, packager);
@@ -52,6 +58,46 @@ public class ClientImpl implements Client {
       }
     } catch(ISOException isoe) {
       App.getLogger().debug(isoe);
-    } 
+    }
+  }
+
+  @Override
+  public void connect2() {
+    init();
+    try {
+      ISOPackager packager = new GenericPackager("packager/iso93ascii.xml");
+      ASCIIChannel channel = new ASCIIChannel(hostname, portNumber, packager);
+
+      ISOMUX isoMux = new ISOMUX(channel) {
+        @Override
+        protected String getKey(ISOMsg m) throws ISOException {
+          return super.getKey(m);
+        }
+      };
+      new Thread(isoMux).start();
+      ISOMsg networkReq = new ISOMsg();
+      networkReq.setMTI("0800");
+      networkReq.set(7, new SimpleDateFormat("MMddHHmmss").format(new Date()));
+      networkReq.set(11, "112233");
+      networkReq.set(70, "001");
+
+      ISORequest req = new ISORequest(networkReq);
+      isoMux.queue(req);
+
+      ISOMsg reply = req.getResponse(50*1000);
+      if(reply != null) {
+        App.getLogger().debug("Req [" + new String(networkReq.pack()) + "]");
+        App.getLogger().debug("Res [" + new String(reply.pack()) + "]");
+        App.getLogger().debug(reply.getMTI());
+        App.getLogger().debug(reply.getString(1));
+        App.getLogger().debug(reply.getString(2));
+        App.getLogger().debug(reply.getString(7));
+        App.getLogger().debug(reply.getString(11));
+        App.getLogger().debug(reply.getString(39));
+        App.getLogger().debug(reply.getString(70));
+      }
+    } catch(ISOException isoe) {
+      App.getLogger().debug(isoe);
+    }
   }
 }

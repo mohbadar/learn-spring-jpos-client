@@ -1,5 +1,6 @@
 lab/aikibo/services/ClientImpl.class
-lab/aikibo/App.class
-lab/aikibo/config/AppConfig.class
 lab/aikibo/services/Client.class
 lab/aikibo/services/ClientImpl$1.class
+lab/aikibo/App.class
+lab/aikibo/config/AppConfig.class
+lab/aikibo/services/ClientImpl$2.class
