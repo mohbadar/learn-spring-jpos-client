@@ -100,4 +100,50 @@ public class ClientImpl implements Client {
       App.getLogger().debug(isoe);
     }
   }
+
+  @Override
+  public void inquiry() {
+    init();
+    try {
+      ISOPackager packager = new GenericPackager("packager/iso93ascii.xml");
+      ASCIIChannel channel = new ASCIIChannel(hostname, portNumber, packager);
+
+      ISOMUX isoMux = new ISOMUX(channel) {
+        @Override
+        protected String getKey(ISOMsg m) throws ISOException {
+          return super.getKey(m);
+        }
+      };
+      new Thread(isoMux).start();
+      ISOMsg networkReq = new ISOMsg();
+      networkReq.setMTI("0200");
+      networkReq.set(2, "028051521");
+      networkReq.set(3, "360000");
+      networkReq.set(4, "000000000000");
+      networkReq.set(7, new SimpleDateFormat("MMddHHmmss").format(new Date()));
+      networkReq.set(11, "112255");
+      networkReq.set(12, new SimpleDateFormat("HHmmss").format(new Date()));
+      networkReq.set(13, new SimpleDateFormat("MMdd").format(new Date()));
+      networkReq.set(18, "7012");
+      networkReq.set(32, "0028");
+      networkReq.set(37, "1");
+      networkReq.set(41, "02");
+      networkReq.set(48, "0223329090901000000371994");
+      networkReq.set(49, "360");
+      networkReq.set(63, "00214");
+
+      ISORequest req = new ISORequest(networkReq);
+      isoMux.queue(req);
+
+      ISOMsg reply = req.getResponse(50*1000);
+      if(reply != null) {
+        App.getLogger().debug("Req [" + new String(networkReq.pack()) + "]");
+        App.getLogger().debug("Res [" + new String(reply.pack()) + "]");
+        App.getLogger().debug(reply.getMTI());
+        App.getLogger().debug(reply.getString(1));
+      }
+    } catch(ISOException isoe) {
+      App.getLogger().debug(isoe);
+    }
+  }
 }
