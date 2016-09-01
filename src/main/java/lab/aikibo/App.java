@@ -23,6 +23,7 @@ public class App
       ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
       Client client = (Client) context.getBean("client");
       client.connect2();
+      client.inquiry();
     }
 
     // --- setter getter
