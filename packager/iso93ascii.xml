@@ -18,7 +18,8 @@
     id="2"
     length="16"
     name="Primary Account Number"
-    class="org.jpos.iso.IFA_LLNUM" />
+    class="org.jpos.iso.IFA_LLNUM"
+    pad="true" />
   <isofield
     id="3"
     length="6"

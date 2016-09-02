@@ -39,12 +39,14 @@ public class ClientImpl implements Client {
     }
   }
 
+  
   @Override
   public void connect() {
     init();
     try {
       ISOMsg networkReq = new ISOMsg();
       networkReq.setMTI("1800");
+      networkReq.set(2, "0280001");
       networkReq.set(3, "123456");
       networkReq.set(7, new SimpleDateFormat("yyyyMMdd").format(new Date()));
       networkReq.set(11, "000001");
