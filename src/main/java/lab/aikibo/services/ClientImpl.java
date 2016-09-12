@@ -21,7 +21,7 @@ public class ClientImpl implements Client {
 
   private void init() {
     hostname = "localhost";
-    portNumber = 15243;
+    portNumber = 10000;
 
     try {
       ISOPackager packager = new GenericPackager("packager/iso93ascii.xml");
@@ -39,7 +39,7 @@ public class ClientImpl implements Client {
     }
   }
 
-  
+
   @Override
   public void connect() {
     init();
@@ -58,7 +58,7 @@ public class ClientImpl implements Client {
       ISORequest req = new ISORequest(networkReq);
       isoMux.queue(req);
 
-      ISOMsg reply = req.getResponse(50*1000);
+      ISOMsg reply = req.getResponse(30*1000);
       if(reply != null) {
         App.getLogger().debug("Req [" + new String(networkReq.pack()) + "]");
         App.getLogger().debug("Res [" + new String(reply.pack()) + "]");
@@ -79,20 +79,24 @@ public class ClientImpl implements Client {
       networkReq.set(11, "112233");
       networkReq.set(70, "001");
 
-      ISORequest req = new ISORequest(networkReq);
-      isoMux.queue(req);
+      for(int i=1; i<=50000; i++) {
+        long startTime = System.currentTimeMillis();
+        ISORequest req = new ISORequest(networkReq);
+        isoMux.queue(req);
 
-      ISOMsg reply = req.getResponse(50*1000);
-      if(reply != null) {
-        App.getLogger().debug("Req [" + new String(networkReq.pack()) + "]");
-        App.getLogger().debug("Res [" + new String(reply.pack()) + "]");
-        App.getLogger().debug(reply.getMTI());
-        App.getLogger().debug(reply.getString(1));
-        App.getLogger().debug(reply.getString(2));
-        App.getLogger().debug(reply.getString(7));
-        App.getLogger().debug(reply.getString(11));
-        App.getLogger().debug(reply.getString(39));
-        App.getLogger().debug(reply.getString(70));
+        ISOMsg reply = req.getResponse(30*1000);
+        if(reply != null) {
+          App.getLogger().debug("Req [" + new String(networkReq.pack()) + "]");
+          App.getLogger().debug("Res [" + new String(reply.pack()) + "]");
+          App.getLogger().debug(reply.getMTI());
+          App.getLogger().debug(reply.getString(1));
+          App.getLogger().debug(reply.getString(2));
+          App.getLogger().debug(reply.getString(7));
+          App.getLogger().debug(reply.getString(11));
+          App.getLogger().debug(reply.getString(39));
+          App.getLogger().debug(reply.getString(70));
+        }
+        App.getLogger().debug("Iterasi ke " + i + " selesai dalam " + (System.currentTimeMillis() - startTime) + " ms.");
       }
     } catch(ISOException isoe) {
       App.getLogger().debug(isoe);

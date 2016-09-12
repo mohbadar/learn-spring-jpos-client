@@ -18,18 +18,15 @@ public class App
 
     static final Logger logger = Logger.getLogger(App.class);
 
-    static long startTime;
-    static long endTime;
 
     public static void main( String[] args )
     {
+
       ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
       Client client = (Client) context.getBean("client");
-      for(int i=1; i<=100; i++) {
-        startTime = System.currentTimeMillis();
-        client.connect();
-        logger.debug("Lama Waktu Iterasi " + i + " : " + (System.currentTimeMillis() - startTime) + " ms.");
-      }
+      long startApp = System.currentTimeMillis();
+      client.connect2();
+      logger.debug("Lama Proses App : " + (System.currentTimeMillis() - startApp) + " ms.");
       //client.connect2();
       //client.inquiry();
     }
